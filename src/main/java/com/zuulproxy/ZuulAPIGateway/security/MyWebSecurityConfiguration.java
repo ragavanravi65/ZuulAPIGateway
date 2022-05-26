@@ -35,7 +35,7 @@ public class MyWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 //                //.hasRole("ADMIN")
 //                .antMatchers("/helloUser") .authenticated()
                 //.hasRole("USER")
-                .antMatchers("/helloAll","/authenticate","/stockData/**","/swagger-ui/**").permitAll()
+                .antMatchers("/helloAll","/authenticate","/stockData/**","/**/swagger-ui/**").permitAll()
                 .anyRequest().authenticated()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
